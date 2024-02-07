@@ -122,7 +122,36 @@
                               </div>
                               <input type="text" class="form-control text-center quantity-amount" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
                               <div class="input-group-append">
-                                <button class="btn btn-outline-black increase" type="button">&plus;</button>
+                                <button id="plus" class="btn btn-outline-black increase" type="button">&plus;</button>
+								<script>
+									document.getElementById("plus").addEventListener("click", function () {
+									window.dataLayer = window.dataLayer || [];
+									window.dataLayer.push({
+									 'event': 'add_to_cart',
+									 'ecommerce': {
+									   'currency':"BRL",
+									   'value': "49.00",
+									   'items':[
+									   {
+									   'item_id': "CAD_1",
+									   'item_name': "Nordic Chair",
+											 'coupon': "SEMCUPOM",
+											 'discount': 0,
+											 'index': 0,
+											'item_brand': "Furni",
+											 'item_category': "Chair",
+											'item_category2': "Madeira",
+									   'item_list_id': "shop_products",
+									   'item_list_name': "Shop products",
+											 'item_variant': "beige",
+											 'price': 49.00,
+											 'quantity': 1		
+									   }
+								   ]
+								   }
+									});
+								   });
+								   </script>
                               </div>
                             </div>
         
