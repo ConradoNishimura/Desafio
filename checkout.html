@@ -465,6 +465,44 @@
 		<script src="js/bootstrap.bundle.min.js"></script>
 		<script src="js/tiny-slider.js"></script>
 		<script src="js/custom.js"></script>
+		<script>
+			document.getElementById("checkout").addEventListener("click", function () {
+			window.dataLayer = window.dataLayer || [];
+			window.dataLayer.push({
+			 'event': 'begin_checkout',
+			 'currency': 'BRL',
+			 'value': 230,
+			 'coupon': 'SEMCUPOM',
+			 'items': [
+				{
+					'item_id': "CAD_1",
+					'item_name': "Nordic Chair",
+					  'coupon': "SEMCUPOM",
+					  'discount': 0,
+					  'index': 0,
+					 'item_brand': "Furni",
+					  'item_category': "Chair",
+					  'item_category2': "Madeira",
+					  'item_variant': "beige",
+					  'price': 49.00,
+					  'quantity': 1
+				},
+				{
+					'item_id': "CAD_2",
+					'item_name': "Kruzo Aero Chair",
+					  'coupon': "SEMCUPOM",
+					  'discount': 0,
+					  'index': 1,
+					 'item_brand': "Furni",
+					  'item_category': "Chair",
+					  'item_category2': "Metal",
+					  'item_variant': "Grey",
+					  'price': 78.00,
+					  'quantity': 2
+				}
+			 ]
+			});
+		});
 	</body>
 
 </html>
