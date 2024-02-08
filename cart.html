@@ -118,7 +118,61 @@
                           <td>
                             <div class="input-group mb-3 d-flex align-items-center quantity-container" style="max-width: 120px;">
                               <div class="input-group-prepend">
-                                <button class="btn btn-outline-black decrease" type="button">&minus;</button>
+                                <button id="decrease" class="btn btn-outline-black decrease" type="button">&minus;</button>
+                              </div>
+                              <input type="text" class="form-control text-center quantity-amount" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                              <div class="input-group-append">
+                                <button id="plus" class="btn btn-outline-black increase" type="button">&plus;</button>
+								
+                              </div>
+                            </div>
+        
+                          </td>
+                          <td>$49.00</td>
+                          <td><a href="#" class="btn btn-black btn-sm">X</a></td>
+                        </tr>
+        
+                        <tr>
+                          <td class="product-thumbnail">
+                            <img src="images/product-2.png" alt="Image" class="img-fluid">
+                          </td>
+                          <td class="product-name">
+                            <h2 class="h5 text-black">Product 2</h2>
+                          </td>
+                          <td>$49.00</td>
+                          <td>
+                            <div class="input-group mb-3 d-flex align-items-center quantity-container" style="max-width: 120px;">
+                              <div class="input-group-prepend">
+                                <button id="decrease" class="btn btn-outline-black decrease" type="button">&minus;</button>
+								<script>
+									document.getElementById("decrease").addEventListener("click", function () {
+									window.dataLayer = window.dataLayer || [];
+									window.dataLayer.push({
+									 'event': 'remove_from_cart',
+									 'ecommerce': {
+									   'currency':"BRL",
+									   'value': "49.00",
+									   'items':[
+									   {
+									   'item_id': "CAD_1",
+									   'item_name': "Nordic Chair",
+										'coupon': "SEMCUPOM",
+										'discount': 0,
+										'index': 0,
+										'item_brand': "Furni",
+										'item_category': "Chair",
+										'item_category2': "Madeira",
+									   'item_list_id': "shop_products",
+									   'item_list_name': "Shop products",
+										'item_variant': "beige",
+										'price': 49.00,
+										'quantity': 1		
+									   }
+								   ]
+								   }
+									});
+								   });
+								   </script>
                               </div>
                               <input type="text" class="form-control text-center quantity-amount" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
                               <div class="input-group-append">
@@ -152,30 +206,6 @@
 									});
 								   });
 								   </script>
-                              </div>
-                            </div>
-        
-                          </td>
-                          <td>$49.00</td>
-                          <td><a href="#" class="btn btn-black btn-sm">X</a></td>
-                        </tr>
-        
-                        <tr>
-                          <td class="product-thumbnail">
-                            <img src="images/product-2.png" alt="Image" class="img-fluid">
-                          </td>
-                          <td class="product-name">
-                            <h2 class="h5 text-black">Product 2</h2>
-                          </td>
-                          <td>$49.00</td>
-                          <td>
-                            <div class="input-group mb-3 d-flex align-items-center quantity-container" style="max-width: 120px;">
-                              <div class="input-group-prepend">
-                                <button class="btn btn-outline-black decrease" type="button">&minus;</button>
-                              </div>
-                              <input type="text" class="form-control text-center quantity-amount" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-                              <div class="input-group-append">
-                                <button class="btn btn-outline-black increase" type="button">&plus;</button>
                               </div>
                             </div>
         
@@ -245,6 +275,7 @@
 								window.dataLayer = window.dataLayer || [];
 								window.dataLayer.push({
 								 'event': 'begin_checkout',
+								 'ecommerce': {
 								 'currency': 'BRL',
 								 'value': 230,
 								 'coupon': 'SEMCUPOM',
@@ -276,6 +307,7 @@
       									'quantity': 2
 									}
 								 ]
+								}
 								});
 							});
 							</script>
