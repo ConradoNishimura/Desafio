@@ -147,6 +147,7 @@
 								<script>
 									document.getElementById("decrease").addEventListener("click", function () {
 									window.dataLayer = window.dataLayer || [];
+									window.dataLayer.push({ ecommerce: null }); 
 									window.dataLayer.push({
 									 'event': 'remove_from_cart',
 									 'ecommerce': {
@@ -181,6 +182,7 @@
 								<script>
 									document.getElementById("plus").addEventListener("click", function () {
 									window.dataLayer = window.dataLayer || [];
+									window.dataLayer.push({ ecommerce: null }); 
 									window.dataLayer.push({
 									 'event': 'add_to_cart',
 									 'ecommerce': {
@@ -276,6 +278,7 @@
 							<script>
 								document.getElementById("checkout").addEventListener("click", function () {
 								window.dataLayer = window.dataLayer || [];
+								window.dataLayer.push({ ecommerce: null }); 
 								window.dataLayer.push({
 								 'event': 'begin_checkout',
 								 'ecommerce': {
@@ -294,7 +297,7 @@
      		 							'item_category2': "Madeira",
       									'item_variant': "beige",
       									'price': 49.00,
-      									'quantity': 2
+      									'quantity': 1
 									},
 									{
 										'item_id': "CAD_2",
@@ -316,6 +319,7 @@
 							</script>
 							<script>
 								window.dataLayer = window.dataLayer || [];
+								window.dataLayer.push({ ecommerce: null }); 
 								window.dataLayer.push({
 								 'event': 'view_cart',
 								 'ecommerce': {
